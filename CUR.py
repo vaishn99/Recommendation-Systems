@@ -1,6 +1,6 @@
 import numpy as np
 
-def get_CUR(A,k):
+def CUR(A,k):
     Prob_c=np.square(A).sum(axis=0)/np.square(A).sum()
     Prob_r=np.square(A).sum(axis=1)/np.square(A).sum()
     def Column_Select(A,c,flag=True):
@@ -26,3 +26,7 @@ def get_CUR(A,k):
     W=A[ixgrid]
     U=np.linalg.pinv(W)
     return C,U,R
+
+
+
+
